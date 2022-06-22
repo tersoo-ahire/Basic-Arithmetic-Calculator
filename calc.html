@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width= , initial-scale=1.0" />
+    <title>Basic Arithmetic Calculator</title>
+  </head>
+  <body>
+    <h1>Basic Arithmetic Calculator using JavaScript</h1>
+    <p>Click the button below to start basic calculations.</p>
+    <button onclick="startCalculations()">Start Calculations</button>
+
+    <script>
+    function startCalculations(){
+      let operation = prompt(
+        "Select an operation you wish to perform \n 1. ADD \n 2. SUBTRACT \n 3. MUTIPLY \n 4. DIVIDE \n 5. MODULUS"
+      );
+      let num1 = parseInt(prompt("Enter first number: "));
+      let num2 = parseInt(prompt("Enter second number: "));
+
+      let addNum = num1 + num2;
+      let subNum = num1 - num2;
+      let multiplyNum = num1 * num2;
+      let divideNum = num1 / num2;
+      let modulusNum = num1 % num2;
+
+      if (operation === "1") {
+        alert("The sum is " + addNum);
+      } else if (operation === "2") {
+        alert("The difference is " + subNum);
+      } else if (operation === "3") {
+        alert("The product is " + multiplyNum);
+      } else if (operation === "4") {
+        alert("The result is " + divideNum);
+      } else if (operation === "5") {
+        alert("The result is " + modulusNum);
+      } else alert("Invalid entry, please try again");
+    }
+    </script>
+  </body>
+</html>
